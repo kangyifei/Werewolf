@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">狼人杀</string>
+    <string name="players_num">游戏人数</string>
+    <string name="input_playersnum_hint">请输入游戏人数</string>
+    <string name="wolves_num">狼人人数</string>
+    <string name="input_wolvesnum_hint">请输入狼人人数</string>
+    <string name="wolfgod1">狼王</string>
+    <string name="wolfgod2">白狼王</string>
+    <string name="wolfgod3">隐狼</string>
+    <string name="choose_gods">请选择神民</string>
+    <string name="god1">预言家</string>
+    <string name="god2">女巫</string>
+    <string name="god3">猎人</string>
+    <string name="god4">守卫</string>
+    <string name="god5">长老</string>
+    <string name="god6">丘比特</string>
+    <string name="god7">白痴</string>
+    <string name="god8">熊</string>
+    <string name="god9">野孩子</string>
+    <string name="start_game">开始游戏</string>
+</resources>

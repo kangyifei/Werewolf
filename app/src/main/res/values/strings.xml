@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WereWolf</string>
+    <string name="players_num">Players Number</string>
+    <string name="input_playersnum_hint">Please input players number</string>
+    <string name="wolves_num">Wolves Number</string>
+    <string name="input_wolvesnum_hint">Please input wolves number</string>
+    <string name="wolfgod1">Wolf King</string>
+    <string name="wolfgod2">White Wolf King</string>
+    <string name="wolfgod3">Hidden Wolf</string>
+    <string name="choose_gods">Choose villages(ex simple village)</string>
+    <string name="god1">Seer</string>
+    <string name="god2">The witch</string>
+    <string name="god3">Hunter</string>
+    <string name="god4">Defender</string>
+    <string name="god5">Older</string>
+    <string name="god6">Cupid</string>
+    <string name="god7">Village Idiot</string>
+    <string name="god8">Bear</string>
+    <string name="god9">Wild Child</string>
+    <string name="start_game">START</string>
+</resources>
