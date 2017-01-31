@@ -3,4 +3,7 @@
     <declare-styleable name="GodsCheckedBox">
         <attr name="android:text"/>
     </declare-styleable>
+    <declare-styleable name="GodsCustomCheckedBox">
+        <attr name="android:text"/>
+    </declare-styleable>
 </resources>

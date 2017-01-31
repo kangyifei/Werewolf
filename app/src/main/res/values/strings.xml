@@ -2,6 +2,7 @@
     <string name="app_name">WereWolf</string>
     <string name="players_num">Players Number</string>
     <string name="input_playersnum_hint">Please input players number</string>
+    <string name="input_customgods_hint">Custom</string>
     <string name="wolves_num">Wolves Number</string>
     <string name="input_wolvesnum_hint">Please input wolves number</string>
     <string name="wolfgod1">Wolf King</string>
@@ -18,4 +19,28 @@
     <string name="god8">Bear</string>
     <string name="god9">Wild Child</string>
     <string name="start_game">START</string>
+    <string name="come_back">Back</string>
+    <string name="game_rules">Game Rules</string>
+    <string name="basic_rule">Basic Rules</string>
+    <string name="roles_rule">Roles Function</string>
+    <string name="recommendplayers_rule">Recommend Player Constitute</string>
+    <string name="rightreserved_rule">All Right Reserved</string>
+    <string name="text_basic_rule">
+        \t\t狼人杀是一款桌上游戏。
+        一般要求游戏人数：8-18人，游戏时间：20-30分钟。\n
+        \t\t游戏中主要由狼人、特殊村民和普通村民组成，
+        狼人的目标是杀死所有村民（屠城）或者是杀死所有普通村民或特殊村民（屠边），
+        而村民的目标则是杀死所有狼人，
+        特殊村民由于有特殊功能为游戏提供了很多有力线索，
+        游戏中还有一个人(法官)负责控制整个游戏的流程。\n
+        \t\t游戏的时间进程以白天和黑夜的更替为代表。
+        夜里，狼人秘密地选择一个村民杀死。
+        白天到来的时候，被杀的村民就会被淘汰出游戏。
+        剩下的人轮流发言商讨并投票，被投票数最多的这个玩家会被淘汰。
+        直到狼人或者村民达成他们的目标，游戏结束
+    </string>
+    <string name="text_roles_rule">test2</string>
+    <string name="text_recommendplayers_rule">test3</string>
+    <string name="text_rightreserved_rule">test4</string>
+
 </resources>

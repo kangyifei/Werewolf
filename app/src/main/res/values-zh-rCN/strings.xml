@@ -3,6 +3,7 @@
     <string name="app_name">狼人杀</string>
     <string name="players_num">游戏人数</string>
     <string name="input_playersnum_hint">请输入游戏人数</string>
+    <string name="input_customgods_hint">自定义</string>
     <string name="wolves_num">狼人人数</string>
     <string name="input_wolvesnum_hint">请输入狼人人数</string>
     <string name="wolfgod1">狼王</string>
@@ -19,4 +20,24 @@
     <string name="god8">熊</string>
     <string name="god9">野孩子</string>
     <string name="start_game">开始游戏</string>
+    <string name="game_rules">游戏规则介绍</string>
+    <string name="basic_rule">基本规则</string>
+    <string name="roles_rule">角色功能</string>
+    <string name="recommendplayers_rule">推荐玩家构成(板子)</string>
+    <string name="rightreserved_rule">关于</string>
+    <string name="text_basic_rule">\t\t狼人杀是一款桌上游戏。
+    一般要求游戏人数：8-18人，游戏时间：20-30分钟。\n
+    \t\t游戏中主要由狼人、特殊村民和普通村民组成，
+    狼人的目标是杀死所有村民（屠城）或者是杀死所有普通村民或特殊村民（屠边），
+    而村民的目标则是杀死所有狼人，
+    特殊村民由于有特殊功能为游戏提供了很多有力线索，
+    游戏中还有一个人(法官)负责控制整个游戏的流程。\n
+    \t\t游戏的时间进程以白天和黑夜的更替为代表。
+    夜里，狼人秘密地选择一个村民杀死。
+    白天到来的时候，被杀的村民就会被淘汰出游戏。
+    剩下的人轮流发言商讨并投票，被投票数最多的这个玩家会被淘汰。
+    直到狼人或者村民达成他们的目标，游戏结束</string>
+    <string name="text_roles_rule">test2</string>
+    <string name="text_recommendplayers_rule">test3</string>
+    <string name="text_rightreserved_rule">test4</string>
 </resources>

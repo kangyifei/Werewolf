@@ -55,100 +55,138 @@
         android:hint="@string/input_wolvesnum_hint"
         android:inputType="number" />
 
-    <TableLayout
-        android:id="@+id/Table_gods"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ETWolvesNumber">
-
-        <TableRow android:layout_margin="10sp">
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/wolfgod1"
-                android:layout_weight="1"
-                android:text="@string/wolfgod1" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/wolfgod2"
-                android:layout_weight="1"
-                android:text="@string/wolfgod2" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/wolfgod3"
-                android:layout_weight="1"
-                android:text="@string/wolfgod3" />
-        </TableRow>
-
-        <TextView
-            android:id="@+id/TVgods"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ETWolvesNumber"
-            android:gravity="center_horizontal"
-            android:text="@string/choose_gods"
-            android:textSize="20sp" />
-
-        <TableRow android:layout_margin="10sp">
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god1"
-                android:layout_weight="1"
-                android:text="@string/god1" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god2"
-                android:layout_weight="1"
-                android:text="@string/god2" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god3"
-                android:layout_weight="1"
-                android:text="@string/god3" />
-        </TableRow>
-
-        <TableRow android:layout_margin="10sp">
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god4"
-                android:layout_weight="1"
-                android:text="@string/god4" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god5"
-                android:layout_weight="1"
-                android:text="@string/god5" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god6"
-                android:layout_weight="1"
-                android:text="@string/god6" />
-        </TableRow>
-
-        <TableRow android:layout_margin="10sp">
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god7"
-                android:layout_weight="1"
-                android:text="@string/god7" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god8"
-                android:layout_weight="1"
-                android:text="@string/god8" />
-
-            <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
-                android:id="@+id/god9"
-                android:layout_weight="1"
-                android:text="@string/god9" />
-        </TableRow>
-    </TableLayout>
 
     <Button
-        android:id="@+id/startGame"
+        android:id="@+id/btnstartGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start_game"
-        android:textSize="26sp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/start_game"
+        android:textSize="26sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnstartGame"
+        android:layout_below="@id/ETWolvesNumber">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/Table_gods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:layout_margin="10sp">
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/wolfgod1"
+                        android:layout_weight="1"
+                        android:text="@string/wolfgod1" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/wolfgod2"
+                        android:layout_weight="1"
+                        android:text="@string/wolfgod2" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/wolfgod3"
+                        android:layout_weight="1"
+                        android:text="@string/wolfgod3" />
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/TVgods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ETWolvesNumber"
+                    android:gravity="center_horizontal"
+                    android:text="@string/choose_gods"
+                    android:textSize="20sp" />
+
+                <TableRow android:layout_margin="10sp">
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god1"
+                        android:layout_weight="1"
+                        android:text="@string/god1" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god2"
+                        android:layout_weight="1"
+                        android:text="@string/god2" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god3"
+                        android:layout_weight="1"
+                        android:text="@string/god3" />
+                </TableRow>
+
+                <TableRow android:layout_margin="10sp">
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god4"
+                        android:layout_weight="1"
+                        android:text="@string/god4" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god5"
+                        android:layout_weight="1"
+                        android:text="@string/god5" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god6"
+                        android:layout_weight="1"
+                        android:text="@string/god6" />
+                </TableRow>
+
+                <TableRow android:layout_margin="10sp">
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god7"
+                        android:layout_weight="1"
+                        android:text="@string/god7" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god8"
+                        android:layout_weight="1"
+                        android:text="@string/god8" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCheckedBox
+                        android:id="@+id/god9"
+                        android:layout_weight="1"
+                        android:text="@string/god9" />
+                </TableRow>
+
+                <TableRow android:layout_margin="10sp">
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCustomCheckedBox
+                        android:id="@+id/godcustom1"
+                        android:layout_weight="1" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCustomCheckedBox
+                        android:id="@+id/godcustom2"
+                        android:layout_weight="1" />
+
+                    <com.xjtu.kangy.WereWolf.widget.GodsCustomCheckedBox
+                        android:id="@+id/godcustom3"
+                        android:layout_weight="1" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--<android.support.v4.widget.DrawerLayout-->
+    <!--android:id="@+id/drawerLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="@string/app_name"-->
+    <!--android:textSize="100dp"/>-->
+    <!--</android.support.v4.widget.DrawerLayout>-->
 </RelativeLayout>

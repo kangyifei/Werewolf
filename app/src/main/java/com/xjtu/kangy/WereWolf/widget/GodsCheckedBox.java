@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,6 +30,16 @@ public class GodsCheckedBox extends LinearLayout {
         CharSequence charSequence=a.getText(R.styleable.GodsCheckedBox_android_text);
         if(null!=tv) {tv.setText(charSequence);}
         a.recycle();
+        tv.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cb.isChecked()){
+                    cb.setChecked(false);
+                }else {
+                    cb.setChecked(true);
+                }
+            }
+        });
     }
     public boolean isChecked(){
         return cb.isChecked();
