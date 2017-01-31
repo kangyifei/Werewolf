@@ -1,8 +1,11 @@
 package com.xjtu.kangy.WereWolf;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,7 +29,7 @@ import java.util.ArrayList;
 public class SetupActivity extends BasicActivity {
     final String TAG = "SetupActivity";
     GodsCheckedBox god1, god2, god3, god4, god5, god6, god7, god8, god9, wolfGod1, wolfGod2, wolfGod3;
-    GodsCustomCheckedBox godCustom1,godCustom2,godCustom3;
+    GodsCustomCheckedBox godCustom1, godCustom2, godCustom3;
     Button btnStart, btnRulesComeBack;
     EditText etGameNumber, etWolvesNumber;
     ListView mListView;
@@ -75,16 +78,47 @@ public class SetupActivity extends BasicActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gameNum = Integer.valueOf(etGameNumber.getText().toString());
-                wolvesNum = Integer.valueOf(etWolvesNumber.getText().toString());
-                ArrayList<String> identities = new ArrayList<String>();
-                int godsNum = addGodsReturnNum(identities);
-                Log.w(TAG, "godsNUM" + godsNum);
-                addWolves(identities, wolvesNum);
-                addVillager(identities, gameNum, godsNum, wolvesNum);
-                Intent intent = new Intent(SetupActivity.this, IdentitiesActivity.class);
-                intent.putExtra("identities", identities);
-                startActivity(intent);
+                if (etGameNumber.getText().toString().isEmpty()
+                        || etWolvesNumber.getText().toString().isEmpty()) {
+                    Dialog alertDialog = new AlertDialog.Builder(SetupActivity.this).
+                            setTitle("警告").
+                            setMessage("人数不能为空").
+                            setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            }).
+                            create();
+                    alertDialog.show();
+                } else {
+                    gameNum = Integer.valueOf(etGameNumber.getText().toString());
+                    wolvesNum = Integer.valueOf(etWolvesNumber.getText().toString());
+                    ArrayList<String> identities = new ArrayList<String>();
+                    if ((godCustom1.isChecked() && godCustom1.getText().isEmpty())
+                            || (godCustom2.isChecked() && godCustom2.getText().isEmpty())
+                            || (godCustom3.isChecked() && godCustom3.getText().isEmpty())) {
+                        Dialog alertDialog = new AlertDialog.Builder(SetupActivity.this).
+                                setTitle("警告").
+                                setMessage("自定义神未取名").
+                                setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                    }
+                                }).
+                                create();
+                        alertDialog.show();
+                    } else {
+                        int godsNum = addGodsReturnNum(identities);
+                        Log.w(TAG, "godsNUM" + godsNum);
+                        addWolves(identities, wolvesNum);
+                        addVillager(identities, gameNum, godsNum, wolvesNum);
+                        Intent intent = new Intent(SetupActivity.this, IdentitiesActivity.class);
+                        intent.putExtra("identities", identities);
+                        startActivity(intent);
+                    }
+                }
             }
         });
     }
@@ -103,9 +137,9 @@ public class SetupActivity extends BasicActivity {
         wolfGod1 = (GodsCheckedBox) findViewById(R.id.wolfgod1);
         wolfGod2 = (GodsCheckedBox) findViewById(R.id.wolfgod2);
         wolfGod3 = (GodsCheckedBox) findViewById(R.id.wolfgod3);
-        godCustom1= (GodsCustomCheckedBox) findViewById(R.id.godcustom1);
-        godCustom2= (GodsCustomCheckedBox) findViewById(R.id.godcustom2);
-        godCustom3= (GodsCustomCheckedBox) findViewById(R.id.godcustom3);
+        godCustom1 = (GodsCustomCheckedBox) findViewById(R.id.godcustom1);
+        godCustom2 = (GodsCustomCheckedBox) findViewById(R.id.godcustom2);
+        godCustom3 = (GodsCustomCheckedBox) findViewById(R.id.godcustom3);
         btnStart = (Button) findViewById(R.id.btnstartGame);
         etGameNumber = (EditText) findViewById(R.id.ETGameNumber);
         etWolvesNumber = (EditText) findViewById(R.id.ETWolvesNumber);
@@ -146,7 +180,7 @@ public class SetupActivity extends BasicActivity {
         mListView.setAdapter(mArrayAdapter);
 //        mBackBtn = (Button) findViewById(R.id.rules_button);
 //        Log.w("BackBTNid-1", "" + R.id.rules_button);
-        final View.OnClickListener backBtnOnClickListener=new View.OnClickListener() {
+        final View.OnClickListener backBtnOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 menu.setMenu(R.layout.list_leftslimenu_setupactivtiy);
@@ -291,21 +325,21 @@ public class SetupActivity extends BasicActivity {
             arrayList.add("god9");
             num++;
         }
-        if(godCustom1.isChecked()){
-            Data.getIdentitiesConvertToDrawable().put("godCustom1",R.drawable.godcustom);
-            Data.getIdentitiesConvertToText().put("godCustom1",godCustom1.getText());
+        if (godCustom1.isChecked()) {
+            Data.getIdentitiesConvertToDrawable().put("godCustom1", R.drawable.godcustom);
+            Data.getIdentitiesConvertToText().put("godCustom1", godCustom1.getText());
             arrayList.add("godCustom1");
             num++;
         }
-        if(godCustom2.isChecked()){
-            Data.getIdentitiesConvertToDrawable().put("godCustom2",R.drawable.godcustom);
-            Data.getIdentitiesConvertToText().put("godCustom2",godCustom2.getText());
+        if (godCustom2.isChecked()) {
+            Data.getIdentitiesConvertToDrawable().put("godCustom2", R.drawable.godcustom);
+            Data.getIdentitiesConvertToText().put("godCustom2", godCustom2.getText());
             arrayList.add("godCustom2");
             num++;
         }
-        if(godCustom3.isChecked()){
-            Data.getIdentitiesConvertToDrawable().put("godCustom3",R.drawable.godcustom);
-            Data.getIdentitiesConvertToText().put("godCustom3",godCustom3.getText());
+        if (godCustom3.isChecked()) {
+            Data.getIdentitiesConvertToDrawable().put("godCustom3", R.drawable.godcustom);
+            Data.getIdentitiesConvertToText().put("godCustom3", godCustom3.getText());
             arrayList.add("godCustom3");
             num++;
         }
