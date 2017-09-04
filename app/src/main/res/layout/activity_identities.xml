@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/TVPlayerNumber"
+            android:id="@+id/tvPlayerNumber"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -30,18 +30,18 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/IVidentity"
+        android:id="@+id/ividentity"
         android:layout_width="match_parent"
         android:layout_height="0sp"
         android:layout_weight="4"
         android:src="@drawable/idetity_cover"/>
 <TextView
-    android:id="@+id/TVidentity"
+    android:id="@+id/tvidentity"
     android:layout_width="match_parent"
     android:layout_height="0sp"
     android:layout_weight="1"
-    android:text="你猜"
     android:gravity="center"
+    android:text="你猜"
     android:textSize="30sp"/>
 <LinearLayout
     android:layout_width="match_parent"

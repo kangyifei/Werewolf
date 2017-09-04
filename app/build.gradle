@@ -1,8 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.xjtu.kangy.killwolves"
@@ -30,5 +32,10 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'com.artemzin.rxjava:proguard-rules:1.1.6.0'
     compile 'com.klinkerapps:link_builder:1.5.2'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'cn.yipianfengye.android:zxing-library:2.2'
 
+}
+repositories {
+    mavenCentral()
 }

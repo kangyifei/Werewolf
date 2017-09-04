@@ -1,26 +1,19 @@
-[
-    {
-        "outputFile": "D:\\APP\\Killwolves\\app\\projectlibs\\slidingmenu_lib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1092,
-                    "endColumn": 42,
-                    "endOffset": 1130
-                },
-                "from": {
-                    "file": "D:\\APP\\Killwolves\\app\\projectlibs\\slidingmenu_lib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1092,
-                        "endColumn": 42,
-                        "endOffset": 1130
+{
+    "logs": [
+        {
+            "outputFile": "D:\\APP\\Killwolves\\app\\projectlibs\\slidingmenu_lib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "D:\\APP\\Killwolves\\app\\projectlibs\\slidingmenu_lib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "1092",
+                        "endColumns": "42",
+                        "endOffsets": "1130"
                     }
                 }
-            }
-        ]
-    }
-]
+            ]
+        }
+    ]
+}

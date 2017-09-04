@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WereWolf</string>
+    <string name="app_name">Setup Roles</string>
     <string name="players_num">Players Number</string>
     <string name="input_playersnum_hint">Please input players number</string>
     <string name="input_customgods_hint">Custom</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">狼人杀</string>
+    <string name="app_name">板子设定</string>
     <string name="players_num">游戏人数</string>
     <string name="input_playersnum_hint">请输入游戏人数</string>
     <string name="input_customgods_hint">自定义</string>
@@ -23,6 +23,7 @@
     <string name="game_rules">游戏规则介绍</string>
     <string name="basic_rule">基本规则</string>
     <string name="roles_rule">角色功能</string>
+    <string name="come_back">Back</string>
     <string name="recommendplayers_rule">推荐玩家构成(板子)</string>
     <string name="rightreserved_rule">关于</string>
     <string name="text_basic_rule">\t\t狼人杀是一款桌上游戏。

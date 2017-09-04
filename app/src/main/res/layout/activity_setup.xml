@@ -29,7 +29,7 @@
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/ETGameNumber"
+        android:id="@+id/etGameNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/apptitle"
@@ -38,7 +38,7 @@
         android:inputType="number" />
 
     <TextView
-        android:id="@+id/TVWolvesNumber"
+        android:id="@+id/tvWolvesNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/TVGameNumber"
@@ -47,17 +47,17 @@
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/ETWolvesNumber"
+        android:id="@+id/etWolvesNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ETGameNumber"
-        android:layout_toEndOf="@id/TVWolvesNumber"
+        android:layout_below="@id/etGameNumber"
+        android:layout_toEndOf="@id/tvWolvesNumber"
         android:hint="@string/input_wolvesnum_hint"
         android:inputType="number" />
 
 
     <Button
-        android:id="@+id/btnstartGame"
+        android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -68,12 +68,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/btnstartGame"
-        android:layout_below="@id/ETWolvesNumber">
+        android:layout_above="@id/btnStart"
+        android:layout_below="@id/etWolvesNumber">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TableLayout
                 android:id="@+id/Table_gods"
@@ -102,7 +102,7 @@
                     android:id="@+id/TVgods"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ETWolvesNumber"
+                    android:layout_below="@id/etWolvesNumber"
                     android:gravity="center_horizontal"
                     android:text="@string/choose_gods"
                     android:textSize="20sp" />
