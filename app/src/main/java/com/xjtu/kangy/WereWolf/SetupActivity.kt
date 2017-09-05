@@ -63,6 +63,7 @@ class SetupActivity : Activity() {
             } else {
                 gameNum = Integer.valueOf(etGameNumber.text.toString())!!
                 wolvesNum = Integer.valueOf(etWolvesNumber.text.toString())!!
+                Data.maxPlayerNum = gameNum
                 val identities = ArrayList<String>()
                 if (godcustom1.isChecked && godcustom1.text.isEmpty()
                         || godcustom2.isChecked && godcustom2.text.isEmpty()
@@ -81,6 +82,7 @@ class SetupActivity : Activity() {
                     } else if (Data.mode == Data.MODE_NETMODE) {
                         val intent = Intent(this@SetupActivity, NetActivity::class.java)
                         intent.putExtra("netmode_creatroom", true)
+                        intent.putExtra("identities", identities)
                         startActivity(intent)
                     }
                 }

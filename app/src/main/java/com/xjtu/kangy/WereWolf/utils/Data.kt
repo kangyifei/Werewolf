@@ -3,7 +3,8 @@ package com.xjtu.kangy.WereWolf.utils
 import android.app.Application
 import com.uuzuche.lib_zxing.activity.ZXingLibrary
 import com.xjtu.kangy.WereWolf.R
-import java.util.*
+import java.net.InetAddress
+import java.net.Socket
 
 /**
  * Created by kangy on 2016/10/20.
@@ -53,6 +54,10 @@ class Data : Application() {
         var NETMODE = 0
         val NETMODE_CREATROOM = 1
         val NETMODE_JOINROOM = 2
-
+        var maxPlayerNum = 0
+        var CurrentPlayerNum = 0
+        var ipList = ArrayList<InetAddress>()
+        var ipMap = HashMap<InetAddress, Socket>()
+        val SENDMSG_ACTION = "com.xjtu.kangy.WereWolf.SendAciton"
     }
 }
