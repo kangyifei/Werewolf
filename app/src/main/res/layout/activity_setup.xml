@@ -15,9 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:gravity="center_horizontal"
-        android:text="@string/app_name"
-        android:textSize="60sp" />
+        android:text="@string/title_setup"
+        android:textSize="40sp"/>
 
     <TextView
         android:id="@+id/TVGameNumber"
@@ -66,10 +68,11 @@
         android:textSize="26sp" />
 
     <ScrollView
+        android:id="@+id/sv_setup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/btnStart"
-        android:layout_below="@id/etWolvesNumber">
+        android:layout_below="@id/tvWolvesNumber">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,7 +105,6 @@
                     android:id="@+id/TVgods"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/etWolvesNumber"
                     android:gravity="center_horizontal"
                     android:text="@string/choose_gods"
                     android:textSize="20sp" />
@@ -176,17 +178,15 @@
                         android:layout_weight="1" />
 
                 </TableRow>
+                <!--<TextView-->
+                <!--android:id="@+id/tv_villagenum"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/villager_num"-->
+                <!--android:textSize="26sp"-->
+                <!--/>-->
             </TableLayout>
         </LinearLayout>
     </ScrollView>
-    <!--<android.support.v4.widget.DrawerLayout-->
-    <!--android:id="@+id/drawerLayout"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent">-->
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:text="@string/app_name"-->
-    <!--android:textSize="100dp"/>-->
-    <!--</android.support.v4.widget.DrawerLayout>-->
 </RelativeLayout>

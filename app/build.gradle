@@ -19,22 +19,33 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/*'
+    }
 }
 
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile project(':app:projectlibs:slidingmenu_lib')
     compile 'io.reactivex:rxandroid:1.2.1'
-// Because RxAndroid releases are few and far between, it is recommended you also
-// explicitly depend on RxJava's latest version for bug fixes and new features.
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'com.artemzin.rxjava:proguard-rules:1.1.6.0'
     compile 'com.klinkerapps:link_builder:1.5.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'cn.yipianfengye.android:zxing-library:2.2'
-
+    implementation files('libs/mina-core-2.0.16.jar')
+    implementation files('libs/commons-logging-1.0.3.jar')
+    implementation files('libs/slf4j-api-1.7.21.jar')
 }
 repositories {
     mavenCentral()

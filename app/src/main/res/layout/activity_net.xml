@@ -16,41 +16,46 @@
 
     </ListView>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_QRcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="二维码"
             android:textSize="30sp"/>
 
         <EditText
             android:id="@+id/et_Message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_toLeftOf="@id/btn_Send"
             android:layout_toRightOf="@id/btn_QRcode"
+            android:layout_weight="1.5"
+            android:gravity="center"
             android:hint="请按提示发送消息"
             />
 
         <Button
             android:id="@+id/btn_Send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout_gravity="right"
             android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="发送"
             android:textSize="30sp"
             />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

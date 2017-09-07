@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">Setup Roles</string>
+    <string name="app_name">WereWolf</string>
     <string name="players_num">Players Number</string>
     <string name="input_playersnum_hint">Please input players number</string>
     <string name="input_customgods_hint">Custom</string>
     <string name="wolves_num">Wolves Number</string>
     <string name="input_wolvesnum_hint">Please input wolves number</string>
+    <string name="villager_num">ordinary villager:%1$S</string>
     <string name="wolfgod1">Wolf King</string>
     <string name="wolfgod2">White Wolf King</string>
     <string name="wolfgod3">Hidden Wolf</string>
@@ -26,6 +27,7 @@
     <string name="recommendplayers_rule">Recommend Player Constitute</string>
     <string name="rightreserved_rule">All Right Reserved</string>
     <string name="text_basic_rule">
+
         \t\t狼人杀是一款桌上游戏。
         一般要求游戏人数：8-18人，游戏时间：20-30分钟。\n
         \t\t游戏中主要由狼人、特殊村民和普通村民组成，
@@ -42,5 +44,6 @@
     <string name="text_roles_rule">test2</string>
     <string name="text_recommendplayers_rule">test3</string>
     <string name="text_rightreserved_rule">test4</string>
+    <string name="title_setup">Role Setup</string>
 
 </resources>

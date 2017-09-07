@@ -21,6 +21,8 @@ import java.util.*
 
 //TODO:加入盗贼职业，卡牌介绍，APP声明
 class SetupActivity : Activity() {
+
+
     internal val TAG = "SetupActivity"
     internal var gameNum: Int = 0
     internal var wolvesNum: Int = 0
@@ -75,19 +77,52 @@ class SetupActivity : Activity() {
                     Log.w(TAG, "godsNUM" + godsNum)
                     addWolves(identities, wolvesNum)
                     addVillager(identities, gameNum, godsNum, wolvesNum)
-                    if (Data.mode == Data.MODE_LOCALMODE) {
-                        val intent = Intent(this@SetupActivity, IdentitiesActivity::class.java)
-                        intent.putExtra("identities", identities)
-                        startActivity(intent)
-                    } else if (Data.mode == Data.MODE_NETMODE) {
-                        val intent = Intent(this@SetupActivity, NetActivity::class.java)
-                        intent.putExtra("netmode_creatroom", true)
-                        intent.putExtra("identities", identities)
-                        startActivity(intent)
+                    var msg = StringBuilder().append("现有角色有\n狼人共:").append(wolvesNum)
+                            .append("名\n")
+                    if (wolfgod1.isChecked || wolfgod2.isChecked || wolfgod3.isChecked) {
+                        msg.append("其中狼神有:")
                     }
+                    if (wolfgod1.isChecked) {
+                        msg.append(Data.identitiesConvertToText["wolfgod1"]).append("  ")
+                    }
+                    if (wolfgod2.isChecked) {
+                        msg.append(Data.identitiesConvertToText["wolfgod2"]).append("  ")
+                    }
+                    if (wolfgod3.isChecked) {
+                        msg.append(Data.identitiesConvertToText["wolfgod3"]).append("  ")
+                    }
+                    if (wolfgod1.isChecked || wolfgod2.isChecked || wolfgod3.isChecked) {
+                        msg.append("\n")
+                    }
+                    msg.append("普通村民有:").append(gameNum - godsNum - wolvesNum).append("名\n")
+                    if (godsNum > 0) {
+                        msg.append("神民有:")
+                        for (i in 0..godsNum - 1) {
+                            msg.append(Data.identitiesConvertToText[identities[i]]).append("  ")
+                        }
+                    }
+                    var dialog = AlertDialog.Builder(this).setTitle("角色分配")
+                            .setMessage(msg)
+                            .setPositiveButton("确定", { dialogInterface: DialogInterface, i: Int ->
+                                if (Data.mode == Data.MODE_LOCALMODE) {
+                                    val intent = Intent(this@SetupActivity, IdentitiesActivity::class.java)
+                                    intent.putExtra("identities", identities)
+                                    startActivity(intent)
+                                } else if (Data.mode == Data.MODE_NETMODE) {
+                                    val intent = Intent(this@SetupActivity, NetActivity::class.java)
+                                    intent.putExtra("netmode_creatroom", true)
+                                    intent.putExtra("identities", identities)
+                                    startActivity(intent)
+                                }
+                            })
+                            .setNegativeButton("取消", null)
+                            .create()
+                    dialog.show()
                 }
             }
         }
+
+
     }
 
 

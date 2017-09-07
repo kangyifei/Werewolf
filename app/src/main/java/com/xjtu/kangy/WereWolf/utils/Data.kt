@@ -59,5 +59,8 @@ class Data : Application() {
         var ipList = ArrayList<InetAddress>()
         var ipMap = HashMap<InetAddress, Socket>()
         val SENDMSG_ACTION = "com.xjtu.kangy.WereWolf.SendAciton"
+        var running = false
+        var receivedMsgList = ArrayList<Event>()
+        var sendMsgList = ArrayList<Event>()
     }
 }

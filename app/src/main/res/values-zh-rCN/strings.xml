@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">板子设定</string>
+    <string name="app_name">狼人杀面杀助手</string>
+    <string name="title_setup">板子设定</string>
     <string name="players_num">游戏人数</string>
     <string name="input_playersnum_hint">请输入游戏人数</string>
     <string name="input_customgods_hint">自定义</string>
     <string name="wolves_num">狼人人数</string>
     <string name="input_wolvesnum_hint">请输入狼人人数</string>
+    <string name="villager_num">普通村民%1$S人</string>
     <string name="wolfgod1">狼王</string>
     <string name="wolfgod2">白狼王</string>
     <string name="wolfgod3">隐狼</string>
